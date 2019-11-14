@@ -7,6 +7,9 @@ const geocode = require('./utils/geocode');
 // Initiate express this way
 const app = express();
 
+// find port for heroku as environment variable called port
+const port = process.env.PORT || 3000;
+
 // Define paths for express config
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
@@ -94,6 +97,6 @@ app.get('*', (req, res) => {
 });
 
 // Start the server by starting listen
-app.listen(3000, () => {
-    console.log('Server is up on port 3k')
+app.listen(port, () => {
+    console.log(`Server is up on port ${port}`)
 });
