@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.get('', (req, res) => {
     res.render('index', {
         title: 'Weather App',
-        name: 'Simi'
+        name: 'Simi Mutasa'
     })
 });
 
@@ -39,7 +39,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help', {
         title: 'Help!!',
-        message: 'Take the red pill',
+        message: 'I love you Nikki!',
         name: 'Simi Mutasa'
     })
 });
